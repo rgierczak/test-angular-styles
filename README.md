@@ -190,7 +190,7 @@ export class AppComponent {
 
 ### It is not allowed to manipulate DOM elements directly!
 
-***AntiPattern***
+**AntiPattern**
 
 ```
 import { Component, Renderer2 } from '@angular/core';
