@@ -1,0 +1,22 @@
+h1 {
+    color: #ff0000;
+}
+
+:host {
+    display: block;
+    border: solid 1px #000000;
+    padding: 20px;
+}
+
+:host(.favorite) {
+    border: solid 1px #ff0000;
+}
+
+:host-context(.boring) {
+    border: 1px solid #cccccc;
+    color: #cccccc;
+}
+
+:host-context(.boring) /deep/ h1 {
+    color: #cccccc;
+}
