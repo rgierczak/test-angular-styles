@@ -1,10 +1,10 @@
-import { TestAngularAnimationsPage } from './app.po';
+import { TestAngularStylesPage } from './app.po';
 
-describe('test-angular-animations App', () => {
-    let page: TestAngularAnimationsPage;
+describe('test-angular-styles App', () => {
+    let page: TestAngularStylesPage;
 
     beforeEach(() => {
-        page = new TestAngularAnimationsPage();
+        page = new TestAngularStylesPage();
     });
 
     it('should display message saying app works', () => {
