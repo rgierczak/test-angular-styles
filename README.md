@@ -27,6 +27,7 @@ CSS framework can be added on three ways:
 * Add directory with framework files to `assets` directory and specify the relative path in `.angular-cli.json`
 
 **Example**
+
 ```
  "styles": [
    "assets/bootstrap/css/bootstrap.min.js",
@@ -37,6 +38,7 @@ CSS framework can be added on three ways:
 * Install framework via NPM and specify the path to node_modules sources in `.angular-cli.json`
 
 **Example**
+
 ```
  "styles": [
    "../node_modules/bootstrap/dist/css/bootstrap.min.css",
@@ -47,6 +49,7 @@ CSS framework can be added on three ways:
 ## Changing Shadow DOM emulation
 
 **Example**
+
 ```
 @Component({
     selector: 'app-author',
@@ -57,6 +60,7 @@ CSS framework can be added on three ways:
 ```
 
 **Using**
+
 It is possible to set encapsulation view with one of the available options:
 * `encapsulation: ViewEncapsulation.Emulated`
 * `encapsulation: ViewEncapsulation.Native`
@@ -65,12 +69,15 @@ It is possible to set encapsulation view with one of the available options:
 ## CSS Selectors
 
 ### :host
+
 Allows to set styles for the host of the component.
 
 ### :host(condition)
+
 Sets the styles for the particular host, specified with the condition.
 
 **Example**
+
 ```
 <app-quote class="favourite"></app-quote>
 ```
@@ -82,9 +89,11 @@ Sets the styles for the particular host, specified with the condition.
 ```
 
 ### :host-context(condition)
+
 Set the styles for the particular host, which is wrapped by element specified in the condition.
 
 **Example**
+
 ```
 :host-context(.boring) {
    border: solid 1px #cccccc;
@@ -102,6 +111,7 @@ Set the styles for the particular host, which is wrapped by element specified in
 Apply styles not only to the elements in the template but also to child components
 
 **Example**
+
 ```
 :host-context(.boring) /deep/ h1 {
    color: #cccccc;
@@ -123,12 +133,14 @@ or alternatively
 Conditionally applies CSS Classes to Elements.
 
 **Using**
+
 * `[ngClass]="{class1: condition}"`
 * `[ngClass]="'class1 class2'"`
 * `[ngClass]="[class1 class2]"`
 * `[ngClass]="{'class1 class2': condition}"`
 
 **Example**
+
 ```
 <app-quote
    [ngClass]="{'favorite super-favorite' : isFavorite}"
@@ -140,11 +152,13 @@ Conditionally applies CSS Classes to Elements.
 Dynamically applies CSS Styles to Elements.
 
 **Using**
+
 * `[ngStyle]="{'background-color': '#ff0000'}"`
 * `[ngStyle]="{'width.px': 200}"`
 * `[ngStyle]="{'height': '400px'}"`
 
 **Example**
+
 ```
 <app-quote
     [ngStyle]="{'width.px': 400}">
@@ -156,6 +170,7 @@ Dynamically applies CSS Styles to Elements.
 The renderer class is a build-in service which allows to manipulate DOM elements.
 
 **Example**
+
 ```
 import { Component, Renderer2 } from '@angular/core';
 
@@ -173,9 +188,10 @@ export class AppComponent {
 }
 ```
 
-### <span style="color:#ff0000">It is not allowed to manipulate DOM elements directly!</span>
+### It is not allowed to manipulate DOM elements directly!
 
 ***AntiPattern***
+
 ```
 import { Component, Renderer2 } from '@angular/core';
 
